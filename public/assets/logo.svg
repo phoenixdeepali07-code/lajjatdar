@@ -1,0 +1,18 @@
+<svg width="400" height="120" viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
+  <!-- Marathi Text: हॉटेल -->
+  <text x="20" y="35" font-family="'Baloo 2', cursive" font-size="28" font-weight="700" fill="#1a1a1a">हॉटेल</text>
+  
+  <!-- Main Title: लज्जतदार -->
+  <text x="20" y="85" font-family="'Baloo 2', cursive" font-size="64" font-weight="800" fill="#A50000" letter-spacing="-1">लज्जतदार</text>
+  
+  <!-- Chilli Icon (Integrated with text or beside it) -->
+  <g transform="translate(245, 15) rotate(15)">
+    <!-- Chilli Body -->
+    <path d="M10,10 Q40,0 60,40 Q70,80 30,90 Q-10,100 0,40 Q5,10 10,10" fill="#D32F2F" />
+    <!-- Chilli Stem -->
+    <path d="M10,10 Q15,-10 30,-5" fill="none" stroke="#2E7D32" stroke-width="6" stroke-linecap="round" />
+  </g>
+
+  <!-- Tagline: चवीची मेजवानी... -->
+  <text x="180" y="110" font-family="'Baloo 2', cursive" font-size="16" font-weight="500" fill="#333">चवीची मेजवानी...</text>
+</svg>
