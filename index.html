@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="mr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>होटल लज्जतदार | Hotel Lajjatdar - Pure Veg Maharashtrian Restaurant</title>
+    <meta name="description"
+        content="Kondigre's finest pure veg restaurant specializing in Akkha Masoor and traditional Maharashtrian flavors.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Martel:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div id="app">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <img src="./public/assets/logo_clean.png" alt="Hotel Lajjatdar Logo" class="logo-img">
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home" data-mr="मुख्य" data-en="Home">मुख्य</a></li>
+                    <li><a href="#menu" data-mr="मेन्यू" data-en="Menu">मेन्यू</a></li>
+                    <li><a href="#gallery" data-mr="गॅलरी" data-en="Gallery">गॅलरी</a></li>
+                    <li><a href="#contact" data-mr="संपर्क" data-en="Contact">संपर्क</a></li>
+                </ul>
+                <div class="lang-switch">
+                    <button id="lang-toggle">English</button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <div class="promo-badge" data-mr="हॉपु (Hoppu) ॲपवर ५% सूट!" data-en="5% OFF on Hoppu App!">हॉपु (Hoppu)
+                    ॲपवर ५% सूट!</div>
+                <h1 data-mr="हॉटेल लज्जतदार" data-en="Hotel Lajjatdar">हॉटेल लज्जतदार</h1>
+                <p data-mr="चवीची मेजवानी..." data-en="A feast of taste...">चवीची मेजवानी...</p>
+                <a href="#menu" class="btn btn-primary" data-mr="मेन्यू पहा" data-en="View Menu">मेन्यू पहा</a>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features container">
+            <div class="feature-card">
+                <div class="feature-icon">🥗</div>
+                <h3 data-mr="शुद्ध शाकाहारी" data-en="100% Pure Veg">शुद्ध शाकाहारी</h3>
+                <p data-mr="ताजी आणि दर्जेदार सामग्री" data-en="Fresh and quality ingredients">ताजी आणि दर्जेदार सामग्री
+                </p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">👨‍👩‍👧‍👦</div>
+                <h3 data-mr="कौटुंबिक वातावरण" data-en="Family Friendly">कौटुंबिक वातावरण</h3>
+                <p data-mr="तुमच्या कुटुंबासाठी उत्तम सोय" data-en="Perfect space for your family">तुमच्या कुटुंबासाठी
+                    उत्तम सोय</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🚙</div>
+                <h3 data-mr="पार्किंग सोय" data-en="Parking Space">पार्किंग सोय</h3>
+                <p data-mr="हायवेला लागून प्रशस्त पार्किंग" data-en="Ample parking on the highway">हायवेला लागून प्रशस्त
+                    पार्किंग</p>
+            </div>
+        </section>
+
+        <!-- Menu Section -->
+        <section id="menu" class="menu container">
+            <h2 class="section-title" data-mr="आमचा खास मेन्यू" data-en="Our Special Menu">आमचा खास मेन्यू</h2>
+            <div class="menu-tabs">
+                <button class="tab-btn active" data-category="special" data-mr="स्पेशल"
+                    data-en="Special">स्पेशल</button>
+                <button class="tab-btn" data-category="breakfast" data-mr="न्याहारी"
+                    data-en="Breakfast">न्याहारी</button>
+                <button class="tab-btn" data-category="thali" data-mr="थाळी" data-en="Thali">थाळी</button>
+                <button class="tab-btn" data-category="marathi" data-mr="मराठी तडका" data-en="Marathi Tadka">मराठी
+                    तडका</button>
+                <button class="tab-btn" data-category="punjabi" data-mr="पंजाबी" data-en="Punjabi">पंजाबी</button>
+            </div>
+            <div class="menu-grid" id="menu-items">
+                <!-- Items will be injected by JS -->
+            </div>
+        </section>
+
+        <!-- Gallery -->
+        <section id="gallery" class="gallery">
+            <h2 class="section-title" data-mr="गॅलरी" data-en="Gallery">गॅलरी</h2>
+            <div class="gallery-grid" id="gallery-container">
+                <!-- Images will be injected -->
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="contact">
+            <div class="container footer-content">
+                <div class="footer-info">
+                    <h3>होटल लज्जतदार</h3>
+                    <p data-mr="कोल्हापूर - सांगली हायवे, कोंडिग्रे, महाराष्ट्र ४१६१०१"
+                        data-en="Kolhapur - Sangli Highway, Kondigre, Maharashtra 416101">कोल्हापूर - सांगली हायवे,
+                        कोंडिग्रे, महाराष्ट्र ४१६१०१</p>
+                    <p>Phone: +91 95455 70555</p>
+                </div>
+                <div class="footer-hours">
+                    <h4 data-mr="वेळ" data-en="Hours">वेळ</h4>
+                    <p data-mr="सकाळी ११:३० ते दुपारी ३:३०" data-en="11:30 AM - 3:30 PM">सकाळी ११:३० ते दुपारी ३:३०</p>
+                    <p data-mr="संध्याकाळी ७:०० ते रात्री १०:३०" data-en="7:00 PM - 10:30 PM">संध्याकाळी ७:०० ते रात्री
+                        १०:३०</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Hotel Lajjatdar. All rights reserved.
+            </div>
+        </footer>
+    </div>
+    <script type="module" src="./main.js"></script>
+</body>
+
+</html>
