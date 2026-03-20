@@ -84,41 +84,14 @@ body {
     margin-bottom: 0.5rem;
 }
 
-.logo-link {
-    text-decoration: none;
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    line-height: 1.1;
-    padding: 0.3rem 0;
+.logo-img {
+    height: 100px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
 }
 
-.logo-sub {
-    font-family: 'Martel', serif;
-    font-size: 0.95rem;
-    font-weight: 700;
-    color: var(--secondary);
-    letter-spacing: 3px;
-    text-transform: uppercase;
-}
 
-.logo-main {
-    font-family: 'Martel', serif;
-    font-size: 3rem;
-    font-weight: 900;
-    color: var(--secondary);
-    line-height: 1;
-    text-shadow: 3px 3px 0 var(--primary);
-}
-
-.logo-tagline {
-    font-family: 'Martel', serif;
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: var(--dark);
-    font-style: italic;
-    letter-spacing: 1px;
-}
 
 .navbar-links {
     width: 100%;
