@@ -2,8 +2,6 @@
     height: 90px;
     width: auto;
     object-fit: contain;
-    mix-blend-mode: multiply;
-    /* Fixes any light background issues from the generated image */
 }
 
 .promo-badge {

@@ -80,3 +80,23 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
 
 // Initial Render
 updateContent();
+
+// Gallery integration
+const galleryImages = [
+    "./public/assets/insta_1.jpg",
+    "./public/assets/insta_2.jpg",
+    "./public/assets/insta_3.jpg",
+    "./public/assets/insta_4.jpg",
+    "./public/assets/insta_5.jpg",
+    "./public/assets/restaurant_interior.png"
+];
+
+function renderGallery() {
+    const galleryContainer = document.getElementById('gallery-container');
+    if (!galleryContainer) return;
+    galleryContainer.innerHTML = galleryImages.map(img => `
+        <img src="${img}" alt="Gallery Image" class="gallery-img" loading="lazy">
+    `).join('');
+}
+
+renderGallery();
