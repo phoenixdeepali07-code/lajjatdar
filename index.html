@@ -1,133 +1,316 @@
 <!DOCTYPE html>
-<html lang="mr">
+<html class="scroll-smooth" lang="mr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>होटल लज्जतदार | Hotel Lajjatdar - Pure Veg Maharashtrian Restaurant</title>
-    <meta name="description"
-        content="Kondigre's finest pure veg restaurant specializing in Akkha Masoor and traditional Maharashtrian flavors.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>हॉटेल लज्जतदार | Hotel Lajjatdar</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link
-        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Martel:wght@300;400;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
+        href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;800;900&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-container-low": "#fff9e6",
+                        "primary-fixed-dim": "#ffb3ac",
+                        "surface-bright": "#fffdf5",
+                        "on-primary": "#ffffff",
+                        "surface-variant": "#f0e6cc",
+                        "primary-fixed": "#ffdad6",
+                        "on-surface": "#1c1c15",
+                        "secondary": "#785900",
+                        "surface-dim": "#dddacf",
+                        "on-background": "#1c1c15",
+                        "outline": "#926f6b",
+                        "on-primary-fixed": "#410003",
+                        "on-primary-container": "#ffffff",
+                        "background": "#fec311", /* Saffron background from logo */
+                        "inverse-on-surface": "#f4f1e6",
+                        "primary-container": "#e62129",
+                        "on-secondary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed-dim": "#fabd00",
+                        "secondary-fixed": "#ffdf9e",
+                        "tertiary-fixed": "#ffdad2",
+                        "on-secondary-fixed-variant": "#5b4300",
+                        "primary": "#d40000", /* Deep red from logo */
+                        "tertiary": "#74564f",
+                        "on-tertiary-container": "#fffeff",
+                        "surface": "#fec311",
+                        "inverse-primary": "#ffb3ac",
+                        "on-surface-variant": "#5d3f3c",
+                        "tertiary-container": "#8f6e67",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-fixed": "#2b1611",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed-variant": "#93000f",
+                        "on-tertiary-fixed-variant": "#5c403a",
+                        "surface-container-high": "#f5eecb",
+                        "surface-container": "#fff6d6",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed-dim": "#e5beb5",
+                        "surface-container-highest": "#f0e6cc",
+                        "error-container": "#ffdad6",
+                        "surface-tint": "#d40000",
+                        "on-secondary-fixed": "#261a00",
+                        "outline-variant": "#e7bdb8",
+                        "on-tertiary": "#ffffff",
+                        "secondary-container": "#009c48", /* Green from veg icon */
+                        "on-secondary-container": "#ffffff",
+                        "inverse-surface": "#31312a"
+                    },
+                    fontFamily: {
+                        "headline": ["Epilogue", "sans-serif"],
+                        "body": ["Plus Jakarta Sans", "sans-serif"],
+                        "label": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
 </head>
 
-<body>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary">
     <div id="app">
-        <nav class="navbar">
-            <!-- Language button pinned top-right -->
-            <div class="lang-switch">
-                <button id="lang-toggle">English</button>
-            </div>
-            <!-- Logo centered -->
-            <div class="navbar-logo">
-                <a href="#home">
-                    <img src="./public/assets/logo.png" alt="Hotel Lajjatdar Logo" class="logo-img">
-                </a>
-            </div>
-            <!-- Nav links below logo -->
-            <div class="navbar-links">
-                <ul class="nav-links">
-                    <li><a href="#home" data-mr="मुख्य" data-en="Home">मुख्य</a></li>
-                    <li><a href="#about" data-mr="आमच्या बद्दल" data-en="About Us">आमच्या बद्दल</a></li>
-                    <li><a href="#menu" data-mr="मेन्यू" data-en="Menu">मेन्यू</a></li>
-                    <li><a href="#gallery" data-mr="गॅलरी" data-en="Gallery">गॅलरी</a></li>
-                    <li><a href="#contact" data-mr="संपर्क" data-en="Contact">संपर्क</a></li>
-                </ul>
+        <!-- TopNavBar Navigation Shell -->
+        <nav class="fixed top-0 w-full z-50 bg-[#fec311]/90 backdrop-blur-md border-b border-primary/10">
+            <div class="flex justify-between items-center max-w-7xl mx-auto px-8 h-20">
+                <div class="flex items-center gap-3">
+                    <img alt="हॉटेल लज्जतदार" class="w-auto object-contain h-24" src="./public/assets/logo.png" />
+                    <div class="border border-[#009c48] p-0.5 w-5 h-5 flex items-center justify-center">
+                        <div class="bg-[#009c48] rounded-full w-2.5 h-2.5"></div>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a class="text-primary dark:text-primary font-bold border-b-2 border-primary pb-1 font-body text-base"
+                        href="#menu" data-mr="मेनू" data-en="Menu">मेनू</a>
+                    <a class="text-on-surface font-medium hover:text-primary transition-colors duration-300 font-body text-base"
+                        href="#home" data-mr="मुख्य" data-en="Home">मुख्य</a>
+                    <a class="text-on-surface font-medium hover:text-primary transition-colors duration-300 font-body text-base"
+                        href="#about" data-mr="आमची कथा" data-en="Our Story">आमची कथा</a>
+                    <a class="text-on-surface font-medium hover:text-primary transition-colors duration-300 font-body text-base"
+                        href="#gallery" data-mr="गॅलरी" data-en="Gallery">गॅलरी</a>
+                </div>
+                <div class="flex items-center gap-4">
+                    <button id="lang-toggle"
+                        class="hidden md:block px-6 py-2.5 rounded-xl text-primary font-bold hover:bg-primary/5 transition-colors duration-300">
+                        English
+                    </button>
+                    <button
+                        class="px-6 py-2.5 bg-primary text-on-primary font-bold rounded-xl scale-95 duration-200 ease-in-out hover:scale-100 shadow-lg shadow-primary/20"
+                        data-mr="ऑर्डर करा" data-en="Order Now">
+                        ऑर्डर करा
+                    </button>
+                </div>
             </div>
         </nav>
 
         <!-- Hero Section -->
-        <section id="home" class="hero">
-            <div class="hero-content">
-                <div class="promo-badge" data-mr="हॉपु (Hoppu) ॲपवर ५% सूट!" data-en="5% OFF on Hoppu App!">हॉपु (Hoppu)
-                    ॲपवर ५% सूट!</div>
-                <h1 data-mr="हॉटेल लज्जतदार" data-en="Hotel Lajjatdar">हॉटेल लज्जतदार</h1>
-                <p data-mr="चवीची मेजवानी..." data-en="A feast of taste...">चवीची मेजवानी...</p>
-                <a href="#menu" class="btn btn-primary" data-mr="मेन्यू पहा" data-en="View Menu">मेन्यू पहा</a>
+        <header id="home" class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <div class="absolute inset-0 bg-gradient-to-r from-surface via-surface/60 to-transparent z-10"></div>
+                <img alt="Authentic Thali Experience" class="w-full h-full object-cover object-center opacity-80"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoFXnfsurGT7GOkcEKkxP8ZDb1_6PAFlAHEfmpAs8eSbRhBAj2nn1ORwAQDMm8ehuUWqY0PPDWTwz0DKkZ6Ip4swJ9lxWVNi2Lzu1mANKsl1QoMvPhCfXpDZxKkSP4CR97aVSw7sIVGVToj0a029Nh-KJBByeiZDxtLtOHthl21AI6PochGFJ19xpMR1QxSoW_9ESlbMZogyHIIK-bZfpVD9zoy5N_3N67HjtHyfrpFum_UiGgwlz7IX5Xp88JIF1NW8-KJmBhVpKO" />
+            </div>
+            <div class="relative z-20 max-w-7xl mx-auto px-8 w-full text-center">
+                <div class="flex flex-col items-center">
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 bg-white/20 backdrop-blur-md border border-white/30 text-on-surface rounded-full mb-6">
+                        <span class="text-xs font-bold uppercase tracking-widest font-label" data-mr="महाराष्ट्राची खरी चव"
+                            data-en="Authentic Taste of Maharashtra">महाराष्ट्राची खरी चव</span>
+                    </div>
+                    <div class="flex flex-col items-center mb-10 w-full">
+                        <img alt="हॉटेल लज्जतदार" class="w-full max-w-[300px] md:max-w-[600px] h-auto object-contain drop-shadow-2xl"
+                            src="./public/assets/logo.png" />
+                    </div>
+                    <div class="flex flex-col gap-2 mb-10 items-center">
+                        <p class="text-2xl font-bold text-secondary-container drop-shadow-sm" data-mr="शुद्ध शाकाहारी"
+                            data-en="100% Pure Veg">शुद्ध शाकाहारी</p>
+                        <p class="text-xl text-on-surface/80 max-w-lg leading-relaxed font-body"
+                            data-mr="चवीची मेजवानी... कोल्हापुरी तडका ते कोकणी स्वाद. अस्सल महाराष्ट्रीयन पदार्थांचा अनुभव."
+                            data-en="A feast of taste... from Kolhapuri tadka to Konkani flavors. Experience authentic Maharashtrian cuisine.">
+                            चवीची मेजवानी... कोल्हापुरी तडका ते कोकणी स्वाद. अस्सल महाराष्ट्रीयन पदार्थांचा अनुभव.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap gap-4 justify-center">
+                        <button
+                            class="px-8 py-4 bg-primary text-on-primary font-bold rounded-xl shadow-xl shadow-primary/30 flex items-center gap-2 group transition-all hover:translate-y-[-2px]">
+                            <span data-mr="आत्ता ऑर्डर करा" data-en="Order Now">आत्ता ऑर्डर करा</span>
+                            <span
+                                class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                        </button>
+                        <a href="#menu"
+                            class="px-8 py-4 bg-white/30 backdrop-blur-sm text-primary font-bold rounded-xl hover:bg-white/40 transition-colors border border-primary/10">
+                            <span data-mr="मेनू पहा" data-en="View Menu">मेनू पहा</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Decorative Floating Badge -->
+            <div class="absolute bottom-12 right-12 hidden lg:block">
+                <div class="bg-surface-container-lowest p-6 rounded-3xl shadow-2xl flex items-center gap-4 max-w-xs border border-primary/10">
+                    <img alt="Featured Dish" class="w-16 h-16 rounded-full object-cover border-2 border-primary"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqENoOyc2BN2GEmG3AGvMXchKxsje3ztsQBhzGThjtYMKWbSpFeQl8USDxfIL73Dx8ONeG3zXLCsMFAONrbg_D2lS9H6mLKsRoMJ3EfzbGLFi_f-aCNIV_qbwjGBbNeRJMUzQ5cUlNyUpJsKrAWONULtKXb30FJDOAO6qcBrb4z_vWzMKMkLn98P3LngvwJBuzJoDVxjVmvfG78xSoLWhXwgNKkvlRf-ScsSGyhIQSe6KXZelmQc-HdK2zaWWjDvjUb6lMzKwS_sEH" />
+                    <div>
+                        <p class="text-[10px] uppercase tracking-widest text-primary font-bold font-label" data-mr="आजचे खास" data-en="Today's Special">आजचे खास</p>
+                        <p class="font-headline font-bold text-on-surface" data-mr="पुरणपोळी" data-en="Puran Poli">पुरणपोळी</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- About Us -->
+        <section id="about" class="py-24 bg-surface-container-low overflow-hidden">
+            <div class="max-w-7xl mx-auto px-8">
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-16 items-center">
+                    <div class="md:col-span-7 relative">
+                        <div class="absolute -top-12 -left-12 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="pt-12">
+                                <img alt="Traditional Spices" class="rounded-2xl shadow-2xl w-full h-[400px] object-cover"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuApPPJrypi9zT8tw-QDxmx2xK7lBumqkpm-aE1rDPQV-alWegpGjJdmCnD9WboRA_QYwFTk9Dzw3xFbHPi2AF51xwtE9-z0KfwZDO0FC1JOZnitZvW-jbBFYTYVMmgXntr5LSJVqT7OaqgdhyVKW1vBMHJtsk3CmjM2Sp-8a_FYdUh1M5tZVwStSD6mM-WJuPeMX8-xWWDpsv3KV_aE5TczzBhOlRQc3oob0pEtV47bvqKpKwdwPFrVj96ztO_CQlOQREq-2EfkzXPO" />
+                            </div>
+                            <div>
+                                <img alt="Our Heritage" class="rounded-2xl shadow-2xl w-full h-[400px] object-cover"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZTHwIQ_RrTauQIkKoJc-dJ41eKtrtUCcmXwiGTYTi_gj7QigJZ-0ZWnY_8hv8Rhv6MAENFPJ4ws9Zjhc8leEVrcW1bl_biISt4fyXkQiPN-6dyW55vjWVCF6odwBAkckXOsX-0YSL39sPqM4p0DvFx4jVL5XmytX0Hs1bTWc5Y11Ottv6XfWx7K-7V-iJwtk2OGurNuwX6IT4-fpZRhhXCfRLeJAVpX7HL4ThkOB75BxVA9bWRF2Ot6QNae7JJci2rn2XNYGsUe1D" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:col-span-5">
+                        <h2 class="font-headline text-4xl font-bold text-on-surface mb-8 leading-tight">
+                            <span data-mr="आमची कथा:" data-en="Our Story:">आमची कथा:</span> <span class="text-primary underline decoration-primary/30" data-mr="हॉटेल लज्जतदार" data-en="Hotel Lajjatdar">हॉटेल लज्जतदार</span>
+                        </h2>
+                        <div class="space-y-6 text-lg text-on-surface-variant leading-relaxed font-body">
+                            <p data-mr="हॉटेल लज्जतदारची सुरुवात सह्याद्रीच्या ग्रामीण भागातील पारंपारिक पाककृती जपण्याच्या ध्यासातून झाली. अस्सल चव म्हणजे केवळ साहित्य नव्हे, तर ते बनवण्याची पद्धत देखील तितकीच महत्त्वाची आहे असे आम्ही मानतो."
+                               data-en="Hotel Lajjatdar started with a passion for preserving traditional recipes from the rural Sahyadri region. We believe authentic taste is not just about ingredients, but also the method of preparation.">
+                                हॉटेल लज्जतदारची सुरुवात सह्याद्रीच्या ग्रामीण भागातील पारंपारिक पाककृती जपण्याच्या ध्यासातून झाली. अस्सल चव म्हणजे केवळ साहित्य नव्हे, तर ते बनवण्याची पद्धत देखील तितकीच महत्त्वाची आहे असे आम्ही मानतो.
+                            </p>
+                            <p data-mr="येथे प्रत्येक मसाला हाताने कुटला जातो, ज्यामुळे मिरचीचा तिखटपणा आणि हळदीचा नैसर्गिक सुगंध कायम राहतो. आम्ही जेवणाकडे केवळ भूक भागवण्याचे साधन म्हणून नाही, तर महाराष्ट्राच्या संस्कृतीचा वारसा म्हणून पाहतो."
+                               data-en="Here, every spice is hand-pounded, maintaining the natural pungency of chillies and the aroma of turmeric. We see food not just as sustenance, but as a heritage of Maharashtra's culture.">
+                                येथे प्रत्येक मसाला हाताने कुटला जातो, ज्यामुळे मिरचीचा तिखटपणा आणि हळदीचा नैसर्गिक सुगंध कायम राहतो. आम्ही जेवणाकडे केवळ भूक भागवण्याचे साधन म्हणून नाही, तर महाराष्ट्राच्या संस्कृतीचा वारसा म्हणून पाहतो.
+                            </p>
+                        </div>
+                        <div class="mt-10 p-6 bg-surface rounded-2xl border-l-4 border-primary shadow-sm">
+                            <p class="font-headline italic text-on-surface font-medium" data-mr='"चवीची मेजवानी... आणि शुद्ध शाकाहारी पदार्थांचा खजिना म्हणजे हॉटेल लज्जतदार."' data-en='"A feast of taste... and a treasure of pure vegetarian delicacies, that is Hotel Lajjatdar."'>
+                                "चवीची मेजवानी... आणि शुद्ध शाकाहारी पदार्थांचा खजिना म्हणजे हॉटेल लज्जतदार."
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- Features Section -->
-        <section class="features container">
-            <div class="feature-card">
-                <div class="feature-icon">🥗</div>
-                <h3 data-mr="शुद्ध शाकाहारी" data-en="100% Pure Veg">शुद्ध शाकाहारी</h3>
-                <p data-mr="ताजी आणि दर्जेदार सामग्री" data-en="Fresh and quality ingredients">ताजी आणि दर्जेदार सामग्री
-                </p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">👨‍👩‍👧‍👦</div>
-                <h3 data-mr="कौटुंबिक वातावरण" data-en="Family Friendly">कौटुंबिक वातावरण</h3>
-                <p data-mr="तुमच्या कुटुंबासाठी उत्तम सोय" data-en="Perfect space for your family">तुमच्या कुटुंबासाठी
-                    उत्तम सोय</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">🚙</div>
-                <h3 data-mr="पार्किंग सोय" data-en="Parking Space">पार्किंग सोय</h3>
-                <p data-mr="हायवेला लागून प्रशस्त पार्किंग" data-en="Ample parking on the highway">हायवेला लागून प्रशस्त
-                    पार्किंग</p>
-            </div>
-        </section>
-
-        <!-- About Us Section -->
-        <section id="about" class="container" style="padding: 5rem 2rem; text-align: center;">
-            <h2 class="section-title" data-mr="आमच्या बद्दल" data-en="About Us">आमच्या बद्दल</h2>
-            <p style="max-width: 800px; margin: 0 auto; font-size: 1.2rem; color: #555; line-height: 1.8;" 
-               data-mr="कोल्हापूर-सांगली हायवेवर वसलेले हॉटेल लज्जतदार, अस्सल कोल्हापुरी चव आणि खास 'अख्खा मसूर' साठी प्रसिद्ध आहे. सर्व ताज्या आणि उच्च दर्जाच्या साहित्याने बनविलेले आपले शाकाहारी जेवण कुटुंबासोबत आनंद घेण्यासाठी एक परिपूर्ण ठिकाण आहे." 
-               data-en="Located on the Kolhapur-Sangli highway, Hotel Lajjatdar is famous for its authentic Kolhapuri taste and special 'Akkha Masoor'. Made with fresh, high-quality ingredients, our pure veg food makes this the perfect family dining destination.">
-                कोल्हापूर-सांगली हायवेवर वसलेले हॉटेल लज्जतदार, अस्सल कोल्हापुरी चव आणि खास 'अख्खा मसूर' साठी प्रसिद्ध आहे. सर्व ताज्या आणि उच्च दर्जाच्या साहित्याने बनविलेले आपले शाकाहारी जेवण कुटुंबासोबत आनंद घेण्यासाठी एक परिपूर्ण ठिकाण आहे.
-            </p>
-        </section>
-
-        <!-- Menu Section -->
-        <section id="menu" class="menu container">
-            <h2 class="section-title" data-mr="आमचा खास मेन्यू" data-en="Our Special Menu">आमचा खास मेन्यू</h2>
-            <div class="menu-tabs">
-                <button class="tab-btn active" data-category="special" data-mr="स्पेशल"
-                    data-en="Special">स्पेशल</button>
-                <button class="tab-btn" data-category="breakfast" data-mr="न्याहारी"
-                    data-en="Breakfast">न्याहारी</button>
-                <button class="tab-btn" data-category="thali" data-mr="थाळी" data-en="Thali">थाळी</button>
-                <button class="tab-btn" data-category="marathi" data-mr="मराठी तडका" data-en="Marathi Tadka">मराठी
-                    तडका</button>
-                <button class="tab-btn" data-category="punjabi" data-mr="पंजाबी" data-en="Punjabi">पंजाबी</button>
-            </div>
-            <div class="menu-grid" id="menu-items">
-                <!-- Items will be injected by JS -->
+        <!-- Menu Highlights (Specials) -->
+        <section id="menu" class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-8">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                    <div class="max-w-xl">
+                        <h2 class="font-headline text-5xl font-black text-on-surface mb-4" data-mr="आमचे खास पदार्थ" data-en="Our Special Dishes">आमचे खास पदार्थ</h2>
+                        <p class="text-tertiary text-lg" data-mr="कोल्हापुरी मिसाळपासून ते शेवगा स्पेशलपर्यंत, प्रत्येक घासात वेगळी चव." data-en="From Kolhapuri Misal to Shevga Special, a different taste in every bite.">कोल्हापुरी मिसाळपासून ते शेवगा स्पेशलपर्यंत, प्रत्येक घासात वेगळी चव.</p>
+                    </div>
+                    <div class="menu-tabs flex gap-4 overflow-x-auto pb-4 no-scrollbar">
+                        <button class="tab-btn active whitespace-nowrap px-6 py-2 rounded-full font-bold transition-all border border-primary/20 hover:bg-primary/5 shadow-sm" data-category="special" data-mr="स्पेशल" data-en="Specials">स्पेशल</button>
+                        <button class="tab-btn whitespace-nowrap px-6 py-2 rounded-full font-bold transition-all border border-primary/20 hover:bg-primary/5 shadow-sm" data-category="breakfast" data-mr="नाश्ता" data-en="Breakfast">नाश्ता</button>
+                        <button class="tab-btn whitespace-nowrap px-6 py-2 rounded-full font-bold transition-all border border-primary/20 hover:bg-primary/5 shadow-sm" data-category="starter" data-mr="स्टार्टर" data-en="Starters">स्टार्टर</button>
+                        <button class="tab-btn whitespace-nowrap px-6 py-2 rounded-full font-bold transition-all border border-primary/20 hover:bg-primary/5 shadow-sm" data-category="soup" data-mr="सुप" data-en="Soups">सुप</button>
+                        <button class="tab-btn whitespace-nowrap px-6 py-2 rounded-full font-bold transition-all border border-primary/20 hover:bg-primary/5 shadow-sm" data-category="veg_dishes" data-mr="व्हेज भाजी" data-en="Veg Dishes">व्हेज भाजी</button>
+                        <button class="tab-btn whitespace-nowrap px-6 py-2 rounded-full font-bold transition-all border border-primary/20 hover:bg-primary/5 shadow-sm" data-category="tadka" data-mr="तडका" data-en="Tadka">तडका</button>
+                        <button class="tab-btn whitespace-nowrap px-6 py-2 rounded-full font-bold transition-all border border-primary/20 hover:bg-primary/5 shadow-sm" data-category="roti" data-mr="रोटी" data-en="Roti">रोटी</button>
+                        <button class="tab-btn whitespace-nowrap px-6 py-2 rounded-full font-bold transition-all border border-primary/20 hover:bg-primary/5 shadow-sm" data-category="rice" data-mr="राईस" data-en="Rice">राईस</button>
+                        <button class="tab-btn whitespace-nowrap px-6 py-2 rounded-full font-bold transition-all border border-primary/20 hover:bg-primary/5 shadow-sm" data-category="thali" data-mr="थाळी" data-en="Thali">थाळी</button>
+                    </div>
+                </div>
+                <!-- Dynamic Menu Grid -->
+                <div class="w-full" id="menu-items">
+                    <!-- Items will be injected by main.js -->
+                </div>
             </div>
         </section>
 
         <!-- Gallery -->
-        <section id="gallery" class="gallery">
-            <h2 class="section-title" data-mr="गॅलरी" data-en="Gallery">गॅलरी</h2>
-            <div class="gallery-grid" id="gallery-container">
-                <!-- Images will be injected -->
+        <section id="gallery" class="py-24 bg-surface-container-low">
+            <div class="max-w-7xl mx-auto px-8">
+                <h2 class="font-headline text-5xl font-black text-on-surface mb-12 text-center" data-mr="गॅलरी" data-en="Gallery">गॅलरी</h2>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" id="gallery-container">
+                    <!-- Images will be injected by main.js -->
+                </div>
             </div>
         </section>
 
         <!-- Footer -->
-        <footer id="contact">
-            <div class="container footer-content">
-                <div class="footer-info">
-                    <h3>होटल लज्जतदार</h3>
-                    <p data-mr="कोल्हापूर - सांगली हायवे, कोंडिग्रे, महाराष्ट्र ४१६१०१"
-                        data-en="Kolhapur - Sangli Highway, Kondigre, Maharashtra 416101">कोल्हापूर - सांगली हायवे,
-                        कोंडिग्रे, महाराष्ट्र ४१६१०१</p>
-                    <p>Phone: +91 95455 70555</p>
+        <footer id="contact" class="bg-primary text-on-primary mt-20">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-8 py-12 max-w-7xl mx-auto">
+                <div>
+                    <div class="text-xl font-headline font-bold mb-6" data-mr="हॉटेल लज्जतदार" data-en="Hotel Lajjatdar">हॉटेल लज्जतदार</div>
+                    <p class="font-body text-sm text-on-primary/80 leading-relaxed mb-6"
+                       data-mr="अस्सल महाराष्ट्रीयन शाकाहारी जेवण. १९९४ पासून आपल्या सेवेत. चवीची मेजवानी... शुद्ध शाकाहारी."
+                       data-en="Authentic Maharashtrian vegetarian food. Serving you since 1994. A feast of taste... pure vegetarian.">
+                        अस्सल महाराष्ट्रीयन शाकाहारी जेवण. १९९४ पासून आपल्या सेवेत. चवीची मेजवानी... शुद्ध शाकाहारी.
+                    </p>
+                    <div class="flex gap-4">
+                        <a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors" href="#">
+                            <span class="material-symbols-outlined text-lg">share</span>
+                        </a>
+                        <a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors" href="#">
+                            <span class="material-symbols-outlined text-lg">location_on</span>
+                        </a>
+                    </div>
                 </div>
-                <div class="footer-hours">
-                    <h4 data-mr="वेळ" data-en="Hours">वेळ</h4>
-                    <p data-mr="सकाळी ११:३० ते दुपारी ३:३०" data-en="11:30 AM - 3:30 PM">सकाळी ११:३० ते दुपारी ३:३०</p>
-                    <p data-mr="संध्याकाळी ७:०० ते रात्री १०:३०" data-en="7:00 PM - 10:30 PM">संध्याकाळी ७:०० ते रात्री
-                        १०:३०</p>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="space-y-4">
+                        <h4 class="font-label text-sm uppercase tracking-widest font-bold opacity-60" data-mr="दुवे" data-en="Links">दुवे</h4>
+                        <ul class="space-y-2">
+                            <li><a class="font-body text-sm hover:text-white/70 transition-colors" href="#about" data-mr="आमची कथा" data-en="Our Story">आमची कथा</a></li>
+                            <li><a class="font-body text-sm hover:text-white/70 transition-colors" href="#menu" data-mr="मेनू" data-en="Menu">मेनू</a></li>
+                            <li><a class="font-body text-sm hover:text-white/70 transition-colors" href="#gallery" data-mr="गॅलरी" data-en="Gallery">गॅलरी</a></li>
+                        </ul>
+                    </div>
+                    <div class="space-y-4">
+                        <h4 class="font-label text-sm uppercase tracking-widest font-bold opacity-60" data-mr="संपर्क" data-en="Contact">संपर्क</h4>
+                        <ul class="space-y-2">
+                            <li class="font-body text-sm" data-mr="कोल्हापूर-सांगली हायवे, कोंडिग्रे" data-en="Kolhapur-Sangli Highway, Kondigre">कोल्हापूर-सांगली हायवे, कोंडिग्रे</li>
+                            <li class="font-body text-sm">+91 95455 70555</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <h4 class="font-label text-sm uppercase tracking-widest font-bold opacity-60" data-mr="अपडेट्स मिळवा" data-en="Get Updates">अपडेट्स मिळवा</h4>
+                    <p class="font-body text-sm text-on-primary/80 mb-4" data-mr="आमच्या नवीन ऑफरसाठी सबस्क्राईब करा." data-en="Subscribe for our new offers.">आमच्या नवीन ऑफरसाठी सबस्क्राईब करा.</p>
+                    <div class="flex">
+                        <input class="bg-white/10 border-none rounded-l-xl w-full text-white placeholder:text-white/40 focus:ring-1 focus:ring-white/50 px-4 py-2" placeholder="ईमेल पत्ता" type="email" />
+                        <button class="bg-white text-primary px-4 rounded-r-xl font-bold" data-mr="सामील व्हा" data-en="Join">सामील व्हा</button>
+                    </div>
                 </div>
             </div>
-            <div class="footer-bottom">
-                &copy; 2026 Hotel Lajjatdar. All rights reserved.
+            <div class="border-t border-white/10 max-w-7xl mx-auto px-8 py-6 text-center">
+                <p class="font-plus-jakarta text-xs uppercase tracking-widest opacity-60">
+                    © २०२४ हॉटेल लज्जतदार. चवीची मेजवानी... शुद्ध शाकाहारी.
+                </p>
             </div>
         </footer>
     </div>
