@@ -1,11 +1,11 @@
 const menuData = {
     special: [
-        { id: 1, mr: "अख्खा मसूर थाळी", en: "Akkha Masoor Thali", price: "₹150", img: "./public/assets/hero_akkhamasoor.png", desc: { mr: "अख्खा मसूर, दही, २ रोटी, खर्डा, पापड, राईस.", en: "Akkha Masoor, Dahi, 2 Roti, Kharda, Papad, Rice." } },
-        { id: 2, mr: "शेवगा फ्राय", en: "Shevga Fry", price: "₹140", img: "./public/assets/hero_akkhamasoor.png", desc: { mr: "कुरकुरीत आणि मसालेदार फ्राय शेवगा.", en: "Crispy and spicy drumstick fry." } },
-        { id: 3, mr: "शेवगा करी", en: "Shevga Curry", price: "₹160", img: "./public/assets/hero_akkhamasoor.png", desc: { mr: "काळया मसाल्यातील आमची प्रसिद्ध शेवगा करी.", en: "Our famous drumstick curry in black masala." } },
-        { id: 4, mr: "पनीर कढाई", en: "Paneer Kadai", price: "₹220", img: "./public/assets/paneer_tikka_masala.png", desc: { mr: "कढाई मसाल्यात शिजवलेले पनीर.", en: "Paneer cooked in traditional kadai spices." } },
-        { id: 5, mr: "पनीर कोफ्ता", en: "Paneer Kofta", price: "₹220", img: "./public/assets/paneer_tikka_masala.png", desc: { mr: "मऊ पनीर कोफ्ते क्रीमी ग्रेव्हीमध्ये.", en: "Soft paneer dumplings in a rich creamy gravy." } },
-        { id: 6, mr: "अख्खा मसूर ग्रेव्ही", en: "Akkha Masoor Gravy", price: "₹80/120", img: "./public/assets/hero_akkhamasoor.png", desc: { mr: "अस्सल कोल्हापुरी चवीचा अख्खा मसूर.", en: "Authentic Kolhapuri style whole brown lentils." } }
+        { id: 1, mr: "अख्खा मसूर थाळी", en: "Akkha Masoor Thali", price: "₹150", img: "./assets/hero_akkhamasoor.png", desc: { mr: "अख्खा मसूर, दही, २ रोटी, खर्डा, पापड, राईस.", en: "Akkha Masoor, Dahi, 2 Roti, Kharda, Papad, Rice." } },
+        { id: 2, mr: "शेवगा फ्राय", en: "Shevga Fry", price: "₹140", img: "./assets/hero_akkhamasoor.png", desc: { mr: "कुरकुरीत आणि मसालेदार फ्राय शेवगा.", en: "Crispy and spicy drumstick fry." } },
+        { id: 3, mr: "शेवगा करी", en: "Shevga Curry", price: "₹160", img: "./assets/hero_akkhamasoor.png", desc: { mr: "काळया मसाल्यातील आमची प्रसिद्ध शेवगा करी.", en: "Our famous drumstick curry in black masala." } },
+        { id: 4, mr: "पनीर कढाई", en: "Paneer Kadai", price: "₹220", img: "./assets/paneer_tikka_masala.png", desc: { mr: "कढाई मसाल्यात शिजवलेले पनीर.", en: "Paneer cooked in traditional kadai spices." } },
+        { id: 5, mr: "पनीर कोफ्ता", en: "Paneer Kofta", price: "₹220", img: "./assets/paneer_tikka_masala.png", desc: { mr: "मऊ पनीर कोफ्ते क्रीमी ग्रेव्हीमध्ये.", en: "Soft paneer dumplings in a rich creamy gravy." } },
+        { id: 6, mr: "अख्खा मसूर ग्रेव्ही", en: "Akkha Masoor Gravy", price: "₹80/120", img: "./assets/hero_akkhamasoor.png", desc: { mr: "अस्सल कोल्हापुरी चवीचा अख्खा मसूर.", en: "Authentic Kolhapuri style whole brown lentils." } }
     ],
     breakfast: [
         { id: 101, mr: "स्पेशल थालीपीठ", en: "Special Thalipith", price: "₹60", desc: { mr: "खुसखुशीत थालीपीठ.", en: "Crispy multigrain flatbread." } },
@@ -140,7 +140,7 @@ function renderMenu(category) {
                     <h3 class="font-headline text-2xl font-black text-primary uppercase tracking-tighter">${item[currentLang]}</h3>
                 </div>
                 <div class="relative mb-6 group-hover:scale-105 transition-transform duration-500">
-                    <img src="./public/assets/restaurant_interior.png" class="w-full h-64 object-cover rounded-2xl shadow-lg">
+                    <img src="./assets/restaurant_interior.png" class="w-full h-64 object-cover rounded-2xl shadow-lg">
                 </div>
                 <ul class="space-y-3 mb-8 px-4">
                     ${thaliItems.map(thaliItem => `
@@ -215,12 +215,12 @@ updateContent();
 
 // Gallery integration
 const galleryImages = [
-    "./public/assets/insta_1.jpg",
-    "./public/assets/insta_2.jpg",
-    "./public/assets/insta_3.jpg",
-    "./public/assets/insta_4.jpg",
-    "./public/assets/insta_5.jpg",
-    "./public/assets/restaurant_interior.png"
+    "./assets/insta_1.jpg",
+    "./assets/insta_2.jpg",
+    "./assets/insta_3.jpg",
+    "./assets/insta_4.jpg",
+    "./assets/insta_5.jpg",
+    "./assets/restaurant_interior.png"
 ];
 
 function renderGallery() {
